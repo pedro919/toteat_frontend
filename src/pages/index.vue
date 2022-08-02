@@ -4,7 +4,7 @@ import axios from 'axios'
 const helloFromApi = ref('')
 
 const apiRequest = async () => {
-  const response = await axios.get('https://desolate-beyond-85011.herokuapp.com/api/hello')
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/hello`)
   helloFromApi.value = response.data
 }
 
