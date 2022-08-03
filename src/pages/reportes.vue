@@ -63,7 +63,7 @@ onMounted(() => {
                         Ingreso por cliente
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ month.data.total_income }}
+                        {{ month.data.income_per_client }}
                       </td>
                     </tr>
                     <tr>
@@ -83,7 +83,7 @@ onMounted(() => {
                   <thead class="bg-gray-50">
                     <tr>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
-                        Formma de pago
+                        Forma de pago
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
                         Uso
