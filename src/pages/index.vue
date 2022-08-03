@@ -18,12 +18,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="mx-10">
+  <div>
     <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
       La pikada de la esquina
     </h2>
 
-    <dl class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <dl class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-10">
       <div class="relative bg-white pt-5 px-4 pb-6 sm:pt-6 sm:px-6 shadow-xl rounded-lg overflow-hidden">
         <dt>
           <div class="absolute bg-indigo-500 rounded-md p-3">
@@ -71,7 +71,7 @@ onMounted(async () => {
       </div>
     </dl>
 
-    <div v-if="totalSales !== undefined" class="mt-10">
+    <div v-if="totalSales !== undefined" class="mt-10 mx-10">
       <table class="min-w-full divide-y divide-gray-300">
         <thead class="bg-gray-50">
           <tr>

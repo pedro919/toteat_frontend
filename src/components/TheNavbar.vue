@@ -46,7 +46,7 @@ const emit = defineEmits(['changedSelectedNavbarItem'])
         <div class="px-2 pt-2 pb-3 space-y-1">
           <div v-for="item in navigation" :key="item.name">
             <router-link :to="item.to">
-              <DisclosureButton class="block px-3 py-2 rounded-md text-base font-medium" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white']" :aria-current="item.current ? 'page' : undefined" @click="changeNavigationItemHandler(item.name)">
+              <DisclosureButton class="block px-3 py-2 rounded-md text-base font-medium" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white']" :aria-current="item.current ? 'page' : undefined" @click="$emit('changedSelectedNavbarItem', $event, item.name)">
                 {{ item.name }}
               </DisclosureButton>
             </router-link>
