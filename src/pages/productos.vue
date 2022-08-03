@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/outline/index.js'
+import { onMounted } from 'vue'
 
 const emit = defineEmits(['changedSelectedNavbarItem'])
 const productsSales = ref(undefined)
@@ -17,10 +18,6 @@ const getProductsSales = async () => {
 const getMonthlyProductsSales = async () => {
   const response = await axios.get(`${import.meta.env.VITE_API_URL}/monthly_sales_by_product`)
   monthlyProductsSales.value = response.data
-}
-
-const clickedCategoryOnMonthlyReportHandler = () => {
-  console.log('Clicked')
 }
 
 onMounted(async () => {

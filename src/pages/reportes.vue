@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/outline/index.js'
+import { onMounted } from 'vue'
 
 const emit = defineEmits(['changedSelectedNavbarItem'])
 const monthlyReport = ref(undefined)

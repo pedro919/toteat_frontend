@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { CreditCardIcon } from '@heroicons/vue/solid/index.js'
 import { ClockIcon, UsersIcon } from '@heroicons/vue/outline/index.js'
+import { onMounted } from 'vue'
 
 const emit = defineEmits(['changedSelectedNavbarItem'])
 const totalSales = ref(undefined)
