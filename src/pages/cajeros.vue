@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/outline/index.js'
 
+const emit = defineEmits(['changedSelectedNavbarItem'])
 const monthlySalesByCashier = ref(undefined)
 const totalSalesByCashier = ref(undefined)
 
@@ -16,8 +17,11 @@ const getTotalSalesByCashier = async () => {
   totalSalesByCashier.value = response.data
 }
 
-getMonthlySalesByCashier()
-getTotalSalesByCashier()
+onMounted(() => {
+  emit('changedSelectedNavbarItem', 'Cajeros')
+  getMonthlySalesByCashier()
+  getTotalSalesByCashier()
+})
 </script>
 
 <template>

@@ -19,8 +19,41 @@ useHead({
     },
   ],
 })
+
+const navigation = ref([
+  { name: 'Inicio', to: '/', current: true },
+  { name: 'Reporte mensual', to: '/reportes', current: false },
+  { name: 'Productos', to: '/productos', current: false },
+  { name: 'Garzones', to: '/garzones', current: false },
+  { name: 'Cajeros', to: '/cajeros', current: false },
+  { name: 'Pedidos', to: '/pedidos', current: false },
+])
+
+const changeNavigationItemHandler = (event, name) => {
+  const nextActiveItem = navigation.value.find(el => el.name === name)
+  const currentActiveItem = navigation.value.find(el => el.current)
+  if (nextActiveItem.name !== currentActiveItem.name) {
+    nextActiveItem.current = true
+    currentActiveItem.current = false
+  }
+}
+
+const changeNavigationItemHandlerOnMounted = (name) => {
+  const nextActiveItem = navigation.value.find(el => el.name === name)
+  const currentActiveItem = navigation.value.find(el => el.current)
+  if (nextActiveItem.name !== currentActiveItem.name) {
+    nextActiveItem.current = true
+    currentActiveItem.current = false
+  }
+}
 </script>
 
 <template>
-  <RouterView />
+  <TheNavbar
+    :navigation="navigation"
+    @changedSelectedNavbarItem="changeNavigationItemHandler"
+  />
+  <RouterView
+    @changedSelectedNavbarItem="changeNavigationItemHandlerOnMounted"
+  />
 </template>
