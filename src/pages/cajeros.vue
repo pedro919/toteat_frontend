@@ -53,10 +53,10 @@ onMounted(() => {
                         Nombre
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Atenciones
+                        Mesas
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Ingresos por atenciones
+                        Ingresos por sus mesas
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                         Clientes atendidos
@@ -72,7 +72,7 @@ onMounted(() => {
                         {{ cashier.total_sales_count }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_sales_income }}
+                        ${{ cashier.total_sales_income }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {{ cashier.total_attended_clients }}
@@ -108,7 +108,7 @@ onMounted(() => {
                   <tbody class="divide-y divide-gray-200 bg-white">
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Ventas totales
+                        Mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {{ cashier.total_sales_count }}
@@ -116,10 +116,10 @@ onMounted(() => {
                     </tr>
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Ingresos totales
+                        Ingresos por sus mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_sales_income }}
+                        ${{ cashier.total_sales_income }}
                       </td>
                     </tr>
                     <tr>

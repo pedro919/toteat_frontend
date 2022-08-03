@@ -44,7 +44,7 @@ onMounted(() => {
                   <tbody class="divide-y divide-gray-200 bg-white">
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Ventas totales
+                        Mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {{ month.data.total_income }}
@@ -63,12 +63,12 @@ onMounted(() => {
                         Ingreso por cliente
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ month.data.income_per_client }}
+                        ${{ month.data.income_per_client }}
                       </td>
                     </tr>
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Tiempo de permanencia promedio
+                        Tiempo de permanencia (min)
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {{ month.data.average_time_in_restaurant }}
@@ -86,7 +86,7 @@ onMounted(() => {
                         Forma de pago
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
-                        Uso
+                        Mesas
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
                         Ingresos por este medio
@@ -102,7 +102,7 @@ onMounted(() => {
                         {{ payment.count }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        {{ payment.income }}
+                        ${{ payment.income }}
                       </td>
                     </tr>
                   </tbody>
@@ -117,7 +117,7 @@ onMounted(() => {
                         Zona
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
-                        Uso
+                        Mesa
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
                         Ingresos
@@ -133,7 +133,7 @@ onMounted(() => {
                         {{ zone.count }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        {{ zone.income }}
+                        ${{ zone.income }}
                       </td>
                     </tr>
                   </tbody>

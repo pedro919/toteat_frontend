@@ -80,7 +80,7 @@ onMounted(async () => {
                       {{ product.count }}
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      {{ product.income }}
+                      ${{ product.income }}
                     </td>
                   </tr>
                 </tbody>
@@ -127,7 +127,7 @@ onMounted(async () => {
                 {{ product.count }}
               </td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                {{ product.income }}
+                ${{ product.income }}
               </td>
             </tr>
           </tbody>

@@ -53,10 +53,10 @@ onMounted(() => {
                         Nombre
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Atenciones
+                        Mesas
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Ingresos por atenciones
+                        Ingresos por sus mesas
                       </th>
                       <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                         Propina
@@ -72,10 +72,10 @@ onMounted(() => {
                         {{ waiter.total_sales_count }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_sales_income }}
+                        ${{ waiter.total_sales_income }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_earned_tip }}
+                        ${{ waiter.total_earned_tip }}
                       </td>
                     </tr>
                   </tbody>
@@ -108,7 +108,7 @@ onMounted(() => {
                   <tbody class="divide-y divide-gray-200 bg-white">
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Ventas totales
+                        Mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {{ waiter.total_sales_count }}
@@ -116,10 +116,10 @@ onMounted(() => {
                     </tr>
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Ingresos totales
+                        Ingresos por sus mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_sales_income }}
+                        ${{ waiter.total_sales_income }}
                       </td>
                     </tr>
                     <tr>
@@ -127,7 +127,7 @@ onMounted(() => {
                         Propina ganada
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_earned_tip }}
+                        ${{ waiter.total_earned_tip }}
                       </td>
                     </tr>
                     <tr>

@@ -45,7 +45,7 @@ onMounted(async () => {
                 Venta total
               </td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                {{ order.total }}
+                ${{ order.total }}
               </td>
             </tr>
             <tr>
@@ -121,7 +121,7 @@ onMounted(async () => {
                   {{ product.quantity }}
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                  {{ product.price }}
+                  ${{ product.price }}
                 </td>
               </tr>
             </tbody>
@@ -133,7 +133,7 @@ onMounted(async () => {
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
-                  Formma de pago
+                  Forma de pago
                 </th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-center w-1/3">
                   Cantidad pagada
@@ -146,7 +146,7 @@ onMounted(async () => {
                   {{ payment.type }}
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                  {{ payment.amount }}
+                  ${{ payment.amount }}
                 </td>
               </tr>
             </tbody>
