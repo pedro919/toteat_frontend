@@ -45,7 +45,7 @@ onMounted(async () => {
                 Venta total
               </td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                ${{ order.total }}
+                ${{ Number(order.total).toLocaleString() }}
               </td>
             </tr>
             <tr>
@@ -121,7 +121,7 @@ onMounted(async () => {
                   {{ product.quantity }}
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                  ${{ product.price }}
+                  ${{ Number(product.price).toLocaleString() }}
                 </td>
               </tr>
             </tbody>
@@ -146,7 +146,7 @@ onMounted(async () => {
                   {{ payment.type }}
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                  ${{ payment.amount }}
+                  ${{ Number(payment.amount).toLocaleString() }}
                 </td>
               </tr>
             </tbody>

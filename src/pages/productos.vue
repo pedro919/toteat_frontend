@@ -77,10 +77,10 @@ onMounted(async () => {
                       {{ product.name }}
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      {{ product.count }}
+                      {{ Number(product.count).toLocaleString() }}
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      ${{ product.income }}
+                      ${{ Number(product.income).toLocaleString() }}
                     </td>
                   </tr>
                 </tbody>
@@ -124,10 +124,10 @@ onMounted(async () => {
                 {{ product.name }}
               </td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                {{ product.count }}
+                {{ Number(product.count).toLocaleString() }}
               </td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                ${{ product.income }}
+                ${{ Number(product.income).toLocaleString() }}
               </td>
             </tr>
           </tbody>

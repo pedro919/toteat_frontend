@@ -35,7 +35,7 @@ onMounted(async () => {
         </dt>
         <dd class="ml-16 pb-6 flex items-baseline sm:pb-7">
           <p v-if="totalSales !== undefined" class="text-2xl font-semibold text-gray-900">
-            {{ totalSales.total_clients }}
+            {{ Number(totalSales.total_clients).toLocaleString() }}
           </p>
         </dd>
       </div>
@@ -50,7 +50,7 @@ onMounted(async () => {
         </dt>
         <dd class="ml-16 pb-6 flex items-baseline sm:pb-7">
           <p v-if="totalSales !== undefined" class="text-2xl font-semibold text-gray-900">
-            ${{ totalSales.total_income }}
+            ${{ Number(totalSales.total_income).toLocaleString() }}
           </p>
         </dd>
       </div>
@@ -60,12 +60,12 @@ onMounted(async () => {
             <component :is="ClockIcon" class="h-6 w-6 text-white" aria-hidden="true" />
           </div>
           <p class="ml-16 text-md font-medium text-gray-500 truncate text-left">
-            Tiempo permanencia (min)
+            Tiempo permanencia
           </p>
         </dt>
         <dd class="ml-16 pb-6 flex items-baseline sm:pb-7">
           <p v-if="totalSales !== undefined" class="text-2xl font-semibold text-gray-900">
-            {{ totalSales.average_time_in_restaurant }}
+            {{ Number(totalSales.average_time_in_restaurant).toLocaleString() }} min
           </p>
         </dd>
       </div>
@@ -92,10 +92,10 @@ onMounted(async () => {
               {{ zone.name }}
             </td>
             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-              {{ zone.count }}
+              {{ Number(zone.count).toLocaleString() }}
             </td>
             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-              ${{ zone.income }}
+              ${{ Number(zone.income).toLocaleString() }}
             </td>
           </tr>
         </tbody>

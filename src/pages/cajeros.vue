@@ -69,13 +69,13 @@ onMounted(() => {
                         {{ cashier.name }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_sales_count }}
+                        {{ (cashier.total_sales_count).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ cashier.total_sales_income }}
+                        ${{ (cashier.total_sales_income).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_attended_clients }}
+                        {{ (cashier.total_attended_clients).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>
@@ -111,7 +111,7 @@ onMounted(() => {
                         Mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_sales_count }}
+                        {{ Number(cashier.total_sales_count).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -119,7 +119,7 @@ onMounted(() => {
                         Ingresos por sus mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ cashier.total_sales_income }}
+                        ${{ (cashier.total_sales_income).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -127,7 +127,7 @@ onMounted(() => {
                         Clientes atendidos
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ cashier.total_attended_clients }}
+                        {{ (cashier.total_attended_clients).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>

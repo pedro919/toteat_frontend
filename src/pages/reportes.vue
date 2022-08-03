@@ -44,10 +44,10 @@ onMounted(() => {
                   <tbody class="divide-y divide-gray-200 bg-white">
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Mesas
+                        Ingresos totales
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ month.data.total_income }}
+                        ${{ Number(month.data.total_income).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -55,7 +55,7 @@ onMounted(() => {
                         Clientes totales
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ month.data.total_clients }}
+                        {{ Number(month.data.total_clients).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -63,15 +63,15 @@ onMounted(() => {
                         Ingreso por cliente
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ month.data.income_per_client }}
+                        ${{ Number(month.data.income_per_client).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        Tiempo de permanencia (min)
+                        Tiempo de permanencia
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ month.data.average_time_in_restaurant }}
+                        {{ Number(month.data.average_time_in_restaurant).toLocaleString() }} min
                       </td>
                     </tr>
                   </tbody>
@@ -99,10 +99,10 @@ onMounted(() => {
                         {{ payment.name }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        {{ payment.count }}
+                        {{ Number(payment.count).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        ${{ payment.income }}
+                        ${{ Number(payment.income).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>
@@ -130,10 +130,10 @@ onMounted(() => {
                         {{ zone.name }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        {{ zone.count }}
+                        {{ Number(zone.count).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 w-1/3">
-                        ${{ zone.income }}
+                        ${{ Number(zone.income).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>

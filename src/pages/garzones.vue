@@ -66,16 +66,16 @@ onMounted(() => {
                   <tbody class="divide-y divide-gray-200 bg-white">
                     <tr v-for="waiter in month.waiters_sales" :key="waiter.name">
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {{ waiter.name }}
+                        {{ Number(waiter.name).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_sales_count }}
+                        {{ Number(waiter.total_sales_count).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ waiter.total_sales_income }}
+                        ${{ Number(waiter.total_sales_income).toLocaleString() }}
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ waiter.total_earned_tip }}
+                        ${{ Number(waiter.total_earned_tip).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>
@@ -111,7 +111,7 @@ onMounted(() => {
                         Mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_sales_count }}
+                        {{ Number(waiter.total_sales_count).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -119,7 +119,7 @@ onMounted(() => {
                         Ingresos por sus mesas
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ waiter.total_sales_income }}
+                        ${{ Number(waiter.total_sales_income).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -127,7 +127,7 @@ onMounted(() => {
                         Propina ganada
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        ${{ waiter.total_earned_tip }}
+                        ${{ Number(waiter.total_earned_tip).toLocaleString() }}
                       </td>
                     </tr>
                     <tr>
@@ -135,7 +135,7 @@ onMounted(() => {
                         Clientes atendidos
                       </td>
                       <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {{ waiter.total_attended_clients }}
+                        {{ Number(waiter.total_attended_clients).toLocaleString() }}
                       </td>
                     </tr>
                   </tbody>
